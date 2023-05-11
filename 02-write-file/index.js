@@ -6,6 +6,8 @@ const writeStream = fs.createWriteStream(path.join(__dirname, 'text.txt'), 'utf-
 
 const rl = readline.createInterface({ input, output });
 
+output.write('Hello! Enter some text: \n')
+
 rl.on('line', (input) => {
   writeStream.write(input);
   writeStream.write('\n');
